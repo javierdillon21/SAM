@@ -1,11 +1,10 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Amplify, { API, graphqlOperation } from "aws-amplify";
-import awsconfig from "../src/aws-exports";
-Amplify.configure(awsconfig);
+import React from "react";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default withAuthenticator(MyApp);
