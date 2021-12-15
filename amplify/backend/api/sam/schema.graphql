@@ -1,18 +1,19 @@
 type Miembro
   @model
   @key(name: "bySemillero", fields: ["semilleroID"])
-  @key(name: "byEquipo", fields: ["equipoID"]) {
+  @key(name: "byEquipo", fields: ["equipoID"])
+  @key(name: "byMinisterio", fields: ["ministerioID"]) {
   id: ID!
   nombres: String!
   apellidos: String!
-  seudonimo: String!
-  sexo: Sexo!
-  fecha_nacimiento: String!
-  nacionalidad: String!
-  ciudad_residencia: String!
-  direccion: String!
+  seudonimo: String
+  sexo: Sexo
+  fecha_nacimiento: String
+  nacionalidad: String
+  ciudad_residencia: String
+  direccion: String
   correo: String
-  estado_civil: Civil!
+  estado_civil: Civil
   numero_hijos: Int
   nombre_conyuge: String
   ocupacion_laboral: String
@@ -35,8 +36,8 @@ type Miembro
   invitado_por: Miembro @connection(fields: ["invitadorID"])
   parentesco_invitador: Parentesco
   createdAt: AWSDate #Fecha de memebresía
-  registrado_por: String!
-  status: Status!
+  registrado_por: String
+  status: Status
   asistencias: [Asistencia] @connection(keyName: "byMiembro", fields: ["id"])
   servicios: [Servicio] @connection(keyName: "byMiembro", fields: ["id"])
   representante: Miembro @connection(fields: ["representanteID"]) #miembro de la iglesia que lo representa
@@ -44,6 +45,8 @@ type Miembro
   semillero: Semillero @connection(fields: ["semilleroID"])
   equipoID: ID
   equipo: Equipo @connection(fields: ["equipoID"])
+  ministerioID: ID
+  ministerio: Ministerio @connection(fields: ["ministerioID"])
 }
 
 type Asistencia
@@ -81,8 +84,8 @@ type Servicio
 }
 type Ministerio @model @key(fields: ["nombre"]) {
   nombre: ID!
-  servidores: [Servicio]
-    @connection(keyName: "byMinisterio", fields: ["nombre"])
+  servicios: [Servicio] @connection(keyName: "byMinisterio", fields: ["nombre"])
+  servidores: [Miembro] @connection(keyName: "byMinisterio", fields: ["nombre"])
   administradorID: ID!
   administrador: Miembro @connection(fields: ["administradorID"])
 }

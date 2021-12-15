@@ -103,6 +103,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -152,6 +153,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -170,6 +172,13 @@ export const onCreateMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -268,6 +277,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -317,6 +327,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -335,6 +346,13 @@ export const onCreateMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -395,6 +413,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -445,6 +464,7 @@ export const onCreateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -452,6 +472,59 @@ export const onCreateMiembro = /* GraphQL */ `
         }
         reuniones {
           nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      ministerioID
+      ministerio {
+        nombre
+        servicios {
+          nextToken
+        }
+        servidores {
+          nextToken
+        }
+        administradorID
+        administrador {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
+          updatedAt
         }
         createdAt
         updatedAt
@@ -561,6 +634,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -610,6 +684,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -628,6 +703,13 @@ export const onUpdateMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -726,6 +808,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -775,6 +858,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -793,6 +877,13 @@ export const onUpdateMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -853,6 +944,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -903,6 +995,7 @@ export const onUpdateMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -910,6 +1003,59 @@ export const onUpdateMiembro = /* GraphQL */ `
         }
         reuniones {
           nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      ministerioID
+      ministerio {
+        nombre
+        servicios {
+          nextToken
+        }
+        servidores {
+          nextToken
+        }
+        administradorID
+        administrador {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
+          updatedAt
         }
         createdAt
         updatedAt
@@ -1019,6 +1165,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -1068,6 +1215,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -1086,6 +1234,13 @@ export const onDeleteMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -1184,6 +1339,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -1233,6 +1389,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -1251,6 +1408,13 @@ export const onDeleteMiembro = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -1311,6 +1475,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -1361,6 +1526,7 @@ export const onDeleteMiembro = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -1368,6 +1534,59 @@ export const onDeleteMiembro = /* GraphQL */ `
         }
         reuniones {
           nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      ministerioID
+      ministerio {
+        nombre
+        servicios {
+          nextToken
+        }
+        servidores {
+          nextToken
+        }
+        administradorID
+        administrador {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
+          updatedAt
         }
         createdAt
         updatedAt
@@ -1450,6 +1669,7 @@ export const onCreateAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -1499,6 +1719,7 @@ export const onCreateAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -1517,6 +1738,13 @@ export const onCreateAsistencia = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -1616,6 +1844,7 @@ export const onUpdateAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -1665,6 +1894,7 @@ export const onUpdateAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -1683,6 +1913,13 @@ export const onUpdateAsistencia = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -1782,6 +2019,7 @@ export const onDeleteAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -1831,6 +2069,7 @@ export const onDeleteAsistencia = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -1849,6 +2088,13 @@ export const onDeleteAsistencia = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -1985,6 +2231,9 @@ export const onCreateServicio = /* GraphQL */ `
       reunionID
       ministerio {
         nombre
+        servicios {
+          nextToken
+        }
         servidores {
           nextToken
         }
@@ -2026,6 +2275,7 @@ export const onCreateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -2099,6 +2349,7 @@ export const onCreateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -2148,6 +2399,7 @@ export const onCreateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -2166,6 +2418,13 @@ export const onCreateServicio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -2200,6 +2459,9 @@ export const onUpdateServicio = /* GraphQL */ `
       reunionID
       ministerio {
         nombre
+        servicios {
+          nextToken
+        }
         servidores {
           nextToken
         }
@@ -2241,6 +2503,7 @@ export const onUpdateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -2314,6 +2577,7 @@ export const onUpdateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -2363,6 +2627,7 @@ export const onUpdateServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -2381,6 +2646,13 @@ export const onUpdateServicio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -2415,6 +2687,9 @@ export const onDeleteServicio = /* GraphQL */ `
       reunionID
       ministerio {
         nombre
+        servicios {
+          nextToken
+        }
         servidores {
           nextToken
         }
@@ -2456,6 +2731,7 @@ export const onDeleteServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         createdAt
@@ -2529,6 +2805,7 @@ export const onDeleteServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -2578,6 +2855,7 @@ export const onDeleteServicio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -2596,6 +2874,13 @@ export const onDeleteServicio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -2625,13 +2910,56 @@ export const onCreateMinisterio = /* GraphQL */ `
   subscription OnCreateMinisterio {
     onCreateMinisterio {
       nombre
-      servidores {
+      servicios {
         items {
           id
           ministerioID
           miembroID
           reunionID
           createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      servidores {
+        items {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -2705,6 +3033,7 @@ export const onCreateMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -2754,6 +3083,7 @@ export const onCreateMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -2772,6 +3102,13 @@ export const onCreateMinisterio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -2786,13 +3123,56 @@ export const onUpdateMinisterio = /* GraphQL */ `
   subscription OnUpdateMinisterio {
     onUpdateMinisterio {
       nombre
-      servidores {
+      servicios {
         items {
           id
           ministerioID
           miembroID
           reunionID
           createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      servidores {
+        items {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -2866,6 +3246,7 @@ export const onUpdateMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -2915,6 +3296,7 @@ export const onUpdateMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -2933,6 +3315,13 @@ export const onUpdateMinisterio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -2947,13 +3336,56 @@ export const onDeleteMinisterio = /* GraphQL */ `
   subscription OnDeleteMinisterio {
     onDeleteMinisterio {
       nombre
-      servidores {
+      servicios {
         items {
           id
           ministerioID
           miembroID
           reunionID
           createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      servidores {
+        items {
+          id
+          nombres
+          apellidos
+          seudonimo
+          sexo
+          fecha_nacimiento
+          nacionalidad
+          ciudad_residencia
+          direccion
+          correo
+          estado_civil
+          numero_hijos
+          nombre_conyuge
+          ocupacion_laboral
+          lugar_trabajo
+          cargo_trabajo
+          tiempo_libre
+          numero_hermanos
+          representanteID
+          parentesco_representante
+          lugar_estudio
+          jornada_academica
+          nivel_academico_actual
+          telefono_convencional
+          telefono_celular
+          whatsapp
+          nombre_padre
+          nombre_madre
+          vive_con
+          invitadorID
+          parentesco_invitador
+          createdAt
+          registrado_por
+          status
+          semilleroID
+          equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -3027,6 +3459,7 @@ export const onDeleteMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -3076,6 +3509,7 @@ export const onDeleteMinisterio = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -3094,6 +3528,13 @@ export const onDeleteMinisterio = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -3191,6 +3632,7 @@ export const onCreateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -3240,6 +3682,7 @@ export const onCreateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -3258,6 +3701,13 @@ export const onCreateEquipo = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -3301,6 +3751,7 @@ export const onCreateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -3409,6 +3860,7 @@ export const onUpdateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -3458,6 +3910,7 @@ export const onUpdateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -3476,6 +3929,13 @@ export const onUpdateEquipo = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -3519,6 +3979,7 @@ export const onUpdateEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -3627,6 +4088,7 @@ export const onDeleteEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -3676,6 +4138,7 @@ export const onDeleteEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -3694,6 +4157,13 @@ export const onDeleteEquipo = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -3737,6 +4207,7 @@ export const onDeleteEquipo = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -3805,6 +4276,7 @@ export const onCreateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -3853,6 +4325,7 @@ export const onCreateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -3932,6 +4405,7 @@ export const onCreateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -3981,6 +4455,7 @@ export const onCreateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -3999,6 +4474,13 @@ export const onCreateSemillero = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -4056,6 +4538,7 @@ export const onUpdateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -4104,6 +4587,7 @@ export const onUpdateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -4183,6 +4667,7 @@ export const onUpdateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -4232,6 +4717,7 @@ export const onUpdateSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -4250,6 +4736,13 @@ export const onUpdateSemillero = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
@@ -4307,6 +4800,7 @@ export const onDeleteSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         nextToken
@@ -4355,6 +4849,7 @@ export const onDeleteSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         miembros {
@@ -4434,6 +4929,7 @@ export const onDeleteSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         parentesco_invitador
@@ -4483,6 +4979,7 @@ export const onDeleteSemillero = /* GraphQL */ `
           status
           semilleroID
           equipoID
+          ministerioID
           updatedAt
         }
         semilleroID
@@ -4501,6 +4998,13 @@ export const onDeleteSemillero = /* GraphQL */ `
           nombre
           administradorID
           caracter
+          createdAt
+          updatedAt
+        }
+        ministerioID
+        ministerio {
+          nombre
+          administradorID
           createdAt
           updatedAt
         }
